@@ -1,8 +1,8 @@
 ---
 MXNET_VERSION: "mxnet"
 output_path: "./output/cityscape"
-symbol: resnet_v1_101_deeplab_dcn
-gpus: '1,2,3,4'
+symbol: resnet_v1_101_deeplab_dcn_dilatedoffset
+gpus: '0,1,2,3'
 SCALES:
 - 1024
 - 2048
@@ -51,7 +51,7 @@ TRAIN:
   end_epoch: 53
   lr: 0.0005
   lr_step: '40.336'
-  model_prefix: "deeplab_resnet_v1_101_cityscapes_segmentation_dcn"
+  model_prefix: "deeplab_resnet_v1_101_cityscapes_segmentation_dcn_dilatedoffset"
   # whether flip image
   FLIP: true
   # size of images for each device

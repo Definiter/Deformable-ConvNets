@@ -2,7 +2,7 @@
 MXNET_VERSION: "mxnet"
 output_path: "./output/cityscape"
 symbol: resnet_v1_101_deeplab_dcn
-gpus: '1,2,3,4'
+gpus: '0,1,2,3'
 SCALES:
 - 1024
 - 2048
@@ -48,15 +48,17 @@ TRAIN:
   # typically we will use 4000 warmup step for single GPU
   warmup_step: 1000
   begin_epoch: 0
-  end_epoch: 53
+  #end_epoch: 53
+  end_epoch: 100
   lr: 0.0005
-  lr_step: '40.336'
-  model_prefix: "deeplab_resnet_v1_101_cityscapes_segmentation_dcn"
+  #lr_step: '40.336'
+  lr_step: '60'
+  model_prefix: "deeplab_resnet_v1_101_cityscapes_segmentation_dcn_epoch100"
   # whether flip image
   FLIP: true
   # size of images for each device
   BATCH_IMAGES: 1
-  # wheter crop image during training
+  # whether crop image during training
   ENABLE_CROP: True
   # scale of cropped image during training
   CROP_HEIGHT: 768
@@ -68,4 +70,4 @@ TRAIN:
 TEST:
   # size of images for each device
   BATCH_IMAGES: 1
-  test_epoch: 53
+  test_epoch: 100

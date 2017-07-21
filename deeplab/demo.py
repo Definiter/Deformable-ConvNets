@@ -23,7 +23,8 @@ os.environ['PYTHONUNBUFFERED'] = '1'
 os.environ['MXNET_CUDNN_AUTOTUNE_DEFAULT'] = '0'
 os.environ['MXNET_ENABLE_GPU_P2P'] = '0'
 cur_path = os.path.abspath(os.path.dirname(__file__))
-update_config(cur_path + '/../experiments/deeplab/cfgs/deeplab_cityscapes_demo.yaml')
+#update_config(cur_path + '/../experiments/deeplab/cfgs/deeplab_cityscapes_demo.yaml')
+update_config(cur_path + '/../experiments/deeplab/cfgs/deeplab_resnet_v1_101_cityscapes_segmentation_acn.yaml')
 
 sys.path.insert(0, os.path.join(cur_path, '../external/mxnet', config.MXNET_VERSION))
 import mxnet as mx
