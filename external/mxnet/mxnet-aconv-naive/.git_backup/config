@@ -1,0 +1,23 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/dmlc/mxnet.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[submodule "cub"]
+	url = https://github.com/dmlc/cub
+[submodule "dlpack"]
+	url = https://github.com/dmlc/dlpack
+[submodule "dmlc-core"]
+	url = https://github.com/dmlc/dmlc-core.git
+[submodule "mshadow"]
+	url = https://github.com/dmlc/mshadow.git
+[submodule "nnvm"]
+	url = https://github.com/dmlc/nnvm
+[submodule "ps-lite"]
+	url = https://github.com/dmlc/ps-lite

@@ -1,0 +1,4 @@
+# pack-refs with: peeled fully-peeled 
+7796ac76ccea1fba31afc32056c83f6da38b6c57 refs/remotes/origin/master
+ce9cb213133c9d082e7310305de97158bccef214 refs/remotes/origin/piiswrong-patch-1
+2e3561500de99a0c173f3bc7b1a6c2b31435d6d9 refs/remotes/origin/sparse

@@ -12,3 +12,4 @@ import resnet_v1_101_deeplab_dilate8x8
 import resnet_v1_101_deeplab_dilate9x9
 import resnet_v1_101_deeplab_dilate10x10
 import resnet_v1_101_deeplab_acn
+import resnet_v1_101_deeplab_acn_res5a

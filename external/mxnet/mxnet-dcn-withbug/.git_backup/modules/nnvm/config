@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	worktree = ../../../nnvm
+[remote "origin"]
+	url = https://github.com/dmlc/nnvm
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[submodule "dmlc-core"]
+	url = https://github.com/dmlc/dmlc-core
+[submodule "plugin/nnvm-fusion"]
+	url = https://github.com/dmlc/nnvm-fusion.git

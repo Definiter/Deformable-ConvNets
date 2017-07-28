@@ -2,7 +2,7 @@
 MXNET_VERSION: "mxnet-aconv"
 output_path: "./output/cityscape"
 symbol: resnet_v1_101_deeplab_acn
-gpus: '4,5,6,7'
+gpus: '1,2,3,4'
 SCALES:
 - 1024
 - 2048
