@@ -874,7 +874,7 @@ class MutableModule(BaseModule):
 
     def fit(self, train_data, eval_data=None, eval_metric='acc',
             epoch_end_callback=None, batch_end_callback=None, kvstore='local',
-            optimizer='sgd', optimizer_params=(('learning_rate', 0.01),),
+            optimizer='sgd', optimizer_params=(('learning_rate', 0.01),), args_lr_mult={},
             eval_end_callback=None,
             eval_batch_end_callback=None, initializer=Uniform(0.01),
             arg_params=None, aux_params=None, allow_missing=False,
@@ -952,6 +952,7 @@ class MutableModule(BaseModule):
                          allow_missing=allow_missing, force_init=force_init)
         self.init_optimizer(kvstore=kvstore, optimizer=optimizer,
                             optimizer_params=optimizer_params)
+        self._curr_module._optimizer.set_lr_mult(args_lr_mult)
 
         if validation_metric is None:
             validation_metric = eval_metric

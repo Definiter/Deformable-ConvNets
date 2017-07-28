@@ -144,13 +144,20 @@ def train_net(args, ctx, pretrained, epoch, prefix, begin_epoch, end_epoch, lr, 
                         'rescale_grad': 1.0,
                         'clip_gradient': None}
 
+    '''
+    args_lr_mult = {'res5a_branch2b_offset': 0.001,
+                     'res5b_branch2b_offset': 0.001,
+                     'res5c_branch2b_offset': 0.001}
+    '''
+    args_lr_mult = {}
+
     if not isinstance(train_data, PrefetchingIter):
         train_data = PrefetchingIter(train_data)
 
     # train
     mod.fit(train_data, eval_metric=eval_metrics, epoch_end_callback=epoch_end_callback,
             batch_end_callback=batch_end_callback, kvstore=config.default.kvstore,
-            optimizer='sgd', optimizer_params=optimizer_params,
+            optimizer='sgd', optimizer_params=optimizer_params, args_lr_mult=args_lr_mult,
             arg_params=arg_params, aux_params=aux_params, begin_epoch=begin_epoch, num_epoch=end_epoch)
 
 def main():
