@@ -87,7 +87,6 @@ lib/nms/*.c
 lib/nms/*.cpp
 
 data
-external
 output
 model
 
