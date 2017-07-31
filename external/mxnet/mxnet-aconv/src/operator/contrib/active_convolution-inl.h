@@ -246,7 +246,7 @@ namespace mxnet {
                 for (index_t j = 0; j < param_.kernel[1]; ++j) {
                     index_t index = (i * param_.kernel[1] + j) * 2;
                     DType Z = pow(pow(doffset_cpu[index], 2) + pow(doffset_cpu[index + 1], 2), 0.5);
-                    DType offset_lr_rate = 0.01;
+                    DType offset_lr_rate = 0.05;
                     doffset_cpu[index] = doffset_cpu[index] / Z * offset_lr_rate;
                     doffset_cpu[index + 1] = doffset_cpu[index + 1] / Z * offset_lr_rate;
                     //cout << "(" << setw(15) << setprecision(8) << doffset_cpu[index] << ", " << setw(15) << setprecision(8) << doffset_cpu[index + 1] << ") | ";
