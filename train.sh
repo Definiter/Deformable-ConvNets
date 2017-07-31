@@ -14,5 +14,3 @@
 python ./experiments/deeplab/deeplab_train_test.py --cfg ./experiments/deeplab/cfgs/deeplab_resnet_v1_101_cityscapes_segmentation_acn.yaml
 #python ./experiments/deeplab/deeplab_train_test.py --cfg ./experiments/deeplab/cfgs/deeplab_resnet_v1_101_cityscapes_segmentation_acn_res5a.yaml
 
-
-test 
