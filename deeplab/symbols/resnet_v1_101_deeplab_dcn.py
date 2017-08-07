@@ -94,7 +94,7 @@ class resnet_v1_101_deeplab_dcn(Symbol):
         res3a_branch1 = mx.symbol.Convolution(name='res3a_branch1', data=res2c_relu, num_filter=512, pad=(0, 0),
                                               kernel=(1, 1), stride=(2, 2), no_bias=True)
         bn3a_branch1 = mx.symbol.BatchNorm(name='bn3a_branch1', data=res3a_branch1, use_global_stats=True,
-                                           fix_gamma=False, eps = self.eps)
+                                           fix_gamma=False, eps = selff.eps)
         scale3a_branch1 = bn3a_branch1
         res3a_branch2a = mx.symbol.Convolution(name='res3a_branch2a', data=res2c_relu, num_filter=128, pad=(0, 0),
                                                kernel=(1, 1), stride=(2, 2), no_bias=True)
