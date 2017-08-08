@@ -68,7 +68,7 @@ coverage.xml
 *.pot
 
 # Django stuff:
-*.log
+#*.log
 
 # Sphinx documentation
 docs/_build/
@@ -78,7 +78,8 @@ target/
 
 *.ipynb
 *.params
-*.json
+*.states
+#*.json
 .vscode/
 
 lib/dataset/pycocotools/*.c
@@ -87,7 +88,6 @@ lib/nms/*.c
 lib/nms/*.cpp
 
 data
-output
 model
 
 .db

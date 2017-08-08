@@ -1,0 +1,117 @@
+2017-06-06 11:28:14,819 testing config:{'CLASS_AGNOSTIC': True,
+ 'MXNET_VERSION': 'mxnet',
+ 'SCALES': [(1024, 2048)],
+ 'TEST': {'BATCH_IMAGES': 1, 'test_epoch': 53},
+ 'TRAIN': {'BATCH_IMAGES': 1,
+           'CROP_HEIGHT': 768,
+           'CROP_WIDTH': 1024,
+           'ENABLE_CROP': True,
+           'ENABLE_OHEM': False,
+           'FLIP': True,
+           'RESUME': False,
+           'SHUFFLE': True,
+           'begin_epoch': 0,
+           'end_epoch': 53,
+           'lr': 0.0005,
+           'lr_step': '40.336',
+           'model_prefix': 'deeplab_resnet_v1_101_cityscapes_segmentation_dcn',
+           'momentum': 0.9,
+           'warmup': True,
+           'warmup_lr': 5e-05,
+           'warmup_step': 1000,
+           'wd': 0.0005},
+ 'dataset': {'NUM_CLASSES': 19,
+             'annotation_prefix': 'gtFine',
+             'dataset': 'CityScape',
+             'dataset_path': '/data/haowang/seg_dataset',
+             'image_set': 'leftImg8bit_train',
+             'root_path': '/data/haowang/seg_dataset',
+             'test_image_set': 'leftImg8bit_val'},
+ 'default': {'frequent': 10, 'kvstore': 'device'},
+ 'gpus': '0,1,2,3,4,5,6,7',
+ 'network': {'FIXED_PARAMS': ['conv1',
+                              'bn_conv1',
+                              'res2',
+                              'bn2',
+                              'gamma',
+                              'beta'],
+             'FIXED_PARAMS_SHARED': ['conv1',
+                                     'bn_conv1',
+                                     'res2',
+                                     'bn2',
+                                     'res3',
+                                     'bn3',
+                                     'res4',
+                                     'bn4',
+                                     'gamma',
+                                     'beta'],
+             'IMAGE_STRIDE': 0,
+             'PIXEL_MEANS': array([ 103.06,  115.9 ,  123.15]),
+             'pretrained': './model/pretrained_model/resnet_v1_101',
+             'pretrained_epoch': 0},
+ 'output_path': './output/cityscape',
+ 'symbol': 'resnet_v1_101_deeplab_dcn'}
+
+2017-06-06 11:28:47,080 testing 8/500 data 1.3331s net 0.4267s post 0.0259s
+2017-06-06 11:28:48,143 testing 16/500 data 1.0658s net 0.3361s post 0.0223s
+2017-06-06 11:28:49,253 testing 24/500 data 0.9758s net 0.3200s post 0.0235s
+2017-06-06 11:28:50,499 testing 32/500 data 0.9720s net 0.3012s post 0.0279s
+2017-06-06 11:28:51,775 testing 40/500 data 0.9744s net 0.2891s post 0.0325s
+2017-06-06 11:28:52,891 testing 48/500 data 0.9489s net 0.2817s post 0.0355s
+2017-06-06 11:28:53,922 testing 56/500 data 0.9213s net 0.2757s post 0.0354s
+2017-06-06 11:28:55,095 testing 64/500 data 0.9144s net 0.2734s post 0.0372s
+2017-06-06 11:28:56,333 testing 72/500 data 0.9203s net 0.2704s post 0.0359s
+2017-06-06 11:28:57,367 testing 80/500 data 0.9027s net 0.2686s post 0.0358s
+2017-06-06 11:28:58,480 testing 88/500 data 0.8965s net 0.2664s post 0.0357s
+2017-06-06 11:28:59,641 testing 96/500 data 0.8956s net 0.2648s post 0.0351s
+2017-06-06 11:29:00,669 testing 104/500 data 0.8853s net 0.2631s post 0.0343s
+2017-06-06 11:29:01,659 testing 112/500 data 0.8742s net 0.2616s post 0.0331s
+2017-06-06 11:29:02,674 testing 120/500 data 0.8661s net 0.2603s post 0.0323s
+2017-06-06 11:29:03,693 testing 128/500 data 0.8584s net 0.2597s post 0.0318s
+2017-06-06 11:29:04,751 testing 136/500 data 0.8542s net 0.2589s post 0.0313s
+2017-06-06 11:29:05,747 testing 144/500 data 0.8471s net 0.2581s post 0.0311s
+2017-06-06 11:29:06,934 testing 152/500 data 0.8506s net 0.2574s post 0.0309s
+2017-06-06 11:29:07,938 testing 160/500 data 0.8444s net 0.2571s post 0.0306s
+2017-06-06 11:29:08,950 testing 168/500 data 0.8398s net 0.2564s post 0.0302s
+2017-06-06 11:29:09,992 testing 176/500 data 0.8368s net 0.2558s post 0.0300s
+2017-06-06 11:29:10,995 testing 184/500 data 0.8322s net 0.2553s post 0.0299s
+2017-06-06 11:29:12,058 testing 192/500 data 0.8306s net 0.2547s post 0.0298s
+2017-06-06 11:29:13,078 testing 200/500 data 0.8271s net 0.2546s post 0.0297s
+2017-06-06 11:29:14,116 testing 208/500 data 0.8248s net 0.2542s post 0.0296s
+2017-06-06 11:29:15,131 testing 216/500 data 0.8217s net 0.2539s post 0.0295s
+2017-06-06 11:29:16,194 testing 224/500 data 0.8206s net 0.2536s post 0.0294s
+2017-06-06 11:29:17,220 testing 232/500 data 0.8184s net 0.2533s post 0.0292s
+2017-06-06 11:29:18,248 testing 240/500 data 0.8163s net 0.2530s post 0.0291s
+2017-06-06 11:29:19,246 testing 248/500 data 0.8132s net 0.2530s post 0.0290s
+2017-06-06 11:29:20,312 testing 256/500 data 0.8126s net 0.2527s post 0.0290s
+2017-06-06 11:29:21,571 testing 264/500 data 0.8181s net 0.2527s post 0.0285s
+2017-06-06 11:29:22,842 testing 272/500 data 0.8234s net 0.2525s post 0.0285s
+2017-06-06 11:29:23,913 testing 280/500 data 0.8227s net 0.2523s post 0.0284s
+2017-06-06 11:29:25,139 testing 288/500 data 0.8257s net 0.2527s post 0.0284s
+2017-06-06 11:29:26,165 testing 296/500 data 0.8238s net 0.2525s post 0.0284s
+2017-06-06 11:29:27,177 testing 304/500 data 0.8216s net 0.2523s post 0.0283s
+2017-06-06 11:29:28,193 testing 312/500 data 0.8194s net 0.2522s post 0.0283s
+2017-06-06 11:29:29,197 testing 320/500 data 0.8173s net 0.2520s post 0.0283s
+2017-06-06 11:29:30,278 testing 328/500 data 0.8170s net 0.2518s post 0.0284s
+2017-06-06 11:29:31,294 testing 336/500 data 0.8152s net 0.2516s post 0.0284s
+2017-06-06 11:29:32,376 testing 344/500 data 0.8149s net 0.2515s post 0.0285s
+2017-06-06 11:29:33,410 testing 352/500 data 0.8136s net 0.2514s post 0.0285s
+2017-06-06 11:29:34,400 testing 360/500 data 0.8116s net 0.2512s post 0.0284s
+2017-06-06 11:29:35,473 testing 368/500 data 0.8111s net 0.2511s post 0.0286s
+2017-06-06 11:29:36,524 testing 376/500 data 0.8104s net 0.2511s post 0.0285s
+2017-06-06 11:29:37,524 testing 384/500 data 0.8087s net 0.2509s post 0.0285s
+2017-06-06 11:29:38,597 testing 392/500 data 0.8084s net 0.2508s post 0.0287s
+2017-06-06 11:29:39,631 testing 400/500 data 0.8075s net 0.2506s post 0.0286s
+2017-06-06 11:29:40,642 testing 408/500 data 0.8061s net 0.2505s post 0.0286s
+2017-06-06 11:29:41,709 testing 416/500 data 0.8057s net 0.2505s post 0.0287s
+2017-06-06 11:29:42,705 testing 424/500 data 0.8042s net 0.2505s post 0.0286s
+2017-06-06 11:29:43,689 testing 432/500 data 0.8028s net 0.2503s post 0.0283s
+2017-06-06 11:29:44,799 testing 440/500 data 0.8032s net 0.2503s post 0.0285s
+2017-06-06 11:29:45,830 testing 448/500 data 0.8024s net 0.2502s post 0.0284s
+2017-06-06 11:29:46,838 testing 456/500 data 0.8012s net 0.2501s post 0.0284s
+2017-06-06 11:29:47,847 testing 464/500 data 0.8001s net 0.2500s post 0.0283s
+2017-06-06 11:29:48,837 testing 472/500 data 0.7989s net 0.2499s post 0.0282s
+2017-06-06 11:29:49,915 testing 480/500 data 0.7991s net 0.2498s post 0.0281s
+2017-06-06 11:29:50,929 testing 488/500 data 0.7980s net 0.2499s post 0.0281s
+2017-06-06 11:29:51,913 testing 496/500 data 0.7967s net 0.2498s post 0.0280s
+2017-06-06 11:29:52,664 testing 504/500 data 0.7883s net 0.2532s post 0.0278s
